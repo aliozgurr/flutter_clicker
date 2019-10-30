@@ -1,10 +1,9 @@
 import 'dart:async';
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
-void main() => runApp(new TheApp());
+void main() => runApp(new MyApp());
 
-class TheApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,53 +12,65 @@ class TheApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Clicker Denemesi'),
+      
     );
   }
 }
-class FirstPage extends StatelessWidget {
+class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-        OutlineButton(
-          child: Icon(Icons.info),
-          
-          onPressed: () {
-           Navigator.push(
-             context,
-             MaterialPageRoute(builder: (context) => SecondRoute()),
-           );
-          }        
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('**SAYFA DEĞİŞTİRİRSEN PUANLARIN SIFIRLANIR****SAYFA DEĞİŞTİRİRSEN PUANLARIN SIFIRLANIR****SAYFA DEĞİŞTİRİRSEN PUANLARIN SIFIRLANIR**'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Ana Sayfa'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
+              },
+            ),
+            ListTile(
+              title: Text('Oyun Hakkında'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage()));
+              },
+            ),
+          ],
         )
-      )
-    );
-  }
-}
-class SecondRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+      ),
+      appBar: AppBar(
+        title: Text('Clicker Denemesi'),
+        backgroundColor: Colors.blue,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Oyun Açıklaması'),
-            Text('Her tıklama ile puanını arttır.'),
-            Text('Puan toplayarak evler al.'),
-            Text('100 puan küçük ev, saniyede 1 puan'),
-            Text('500 puan büyük ev, saniyede 5 puan'),
-            Text('40 saniyede bir evler ikiye katlanır.'),
+            Text('Artıya tıklayaran puan topla.'),
+            Text('100 puan karşılığında ev al.'),
+            Text('400 puan karşılığında büyük ev al.'),
+            Text('Ev saniyede 1 puan verir.'),
+            Text('Büyük ev saniyede 5 puan verir.'),
+            Text('40 saniyede bir bütün evlerin ikiye katlanır.'),
             Text(''),
             Text(''),
             Text(''),
             Text(''),
-            Text('2019 Ali ÖZGÜR© ')
+            Text('2019, Ali Özgür'),
           ],
         ),
-      )
+      ),
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -80,7 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     main();
     main2();
-     main3();
+    main3();
+    setState(() {
+    });
   }
 
   void _incrementCounter() {// Eklemeler sürekli tekrar çağrıldığı için bunları ayrı bir voide almamız gerek
@@ -161,13 +174,37 @@ class _MyHomePageState extends State<MyHomePage> {
      }
       });
     }
-
   @override
   Widget build(BuildContext context) {
-
+    
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('**SAYFA DEĞİŞTİRİRSEN PUANLARIN SIFIRLANIR****SAYFA DEĞİŞTİRİRSEN PUANLARIN SIFIRLANIR****SAYFA DEĞİŞTİRİRSEN PUANLARIN SIFIRLANIR**'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Ana Sayfa'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
+              },
+            ),
+            ListTile(
+              title: Text('Oyun Hakkında'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage()));
+              },
+            )
+          ],
+        )
+      ),
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text('Clicker Denemesi'),
         ),        
         body: Center(
           child: Column(
@@ -216,10 +253,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             FloatingActionButton( //Düz ufak butonlar
+              heroTag: "btn1",
               onPressed: _evKontrol,
               child: Icon(Icons.home),
             ),
             FloatingActionButton(
+              heroTag: "btn2",
               onPressed: _malikane,
               child: Icon(Icons.brightness_1))
           ],
