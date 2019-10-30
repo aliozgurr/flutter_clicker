@@ -9,7 +9,7 @@
 ## TO-DO
 - appBar'a drawer eklemek ve drawer'de uygulama hakkındaki bilgileri gösteren bir sekme yapmak 
 - Yapıldı fakat buglu, sayfalar değişince skor sıfırlanıyor, fixlenmesi gerek
-
+oooooooooooooooooooo
 - Adding drawer to appBar and making a tab that shows information about the app in the drawer
 - It has been done but when the user change pages the score resets, it needs to be fixed
 
