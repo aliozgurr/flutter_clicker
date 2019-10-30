@@ -6,7 +6,9 @@ Flutter ile yaptığım tıklamaya dayalı uygulama. Kendimi geliştirmek için 
 ## TO-DO
 
 / appBar'a drawer eklemek ve drawer'de uygulama hakkındaki bilgileri gösteren bir sekme yapmak 
-Yapıldı buglu, sayfalar değişince skor sıfırlanıyor, fixlenmesi gerek /
+
+
+Yapıldı fakat buglu, sayfalar değişince skor sıfırlanıyor, fixlenmesi gerek /
 
 ## NEXT LEVEL TO-DO
 
