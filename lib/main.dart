@@ -71,7 +71,6 @@ class SecondPage extends StatelessWidget {
   }
 }
 
-
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -175,8 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
       });
     }
   @override
-  Widget build(BuildContext context) {
-    
+  Widget build(BuildContext context) {   
     return Scaffold(
       drawer: Drawer(
         child: ListView(
@@ -248,7 +246,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ), 
-
         floatingActionButton: Row( //Yan yana düğme yazmak için Row gerek
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
