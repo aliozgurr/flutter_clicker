@@ -7,13 +7,10 @@ Flutter ile yaptığım tıklamaya dayalı uygulama. Kendimi geliştirmek için 
 Clicker based app that I made with Flutter. App is for improving myself, it doesn't have a point.
 
 ## TO-DO
-
-/ - appBar'a drawer eklemek ve drawer'de uygulama hakkındaki bilgileri gösteren bir sekme yapmak 
-  - Adding drawer to appBar and making a tab that shows information about the app in the drawer
-
+- appBar'a drawer eklemek ve drawer'de uygulama hakkındaki bilgileri gösteren bir sekme yapmak 
+ Adding drawer to appBar and making a tab that shows information about the app in the drawer
 - Yapıldı fakat buglu, sayfalar değişince skor sıfırlanıyor, fixlenmesi gerek
-- It has been done but when the user change pages the score resets, it needs to be fixed
-/
+ It has been done but when the user change pages the score resets, it needs to be fixed
 
 ## NEXT LEVEL TO-DO
 
